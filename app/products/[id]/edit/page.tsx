@@ -1,9 +1,14 @@
+import { EditProduct } from '@/components/EditProduct';
 import React from 'react'
+type Params ={
+  params: Promise<{id:string}>
+}
 
-export default function editProductPage() {
+export default async function editProductPage({params}: Params) {
+  const {id} = await params;
   return (
     <div>
-        <h1>edit</h1>
+        <EditProduct id = {id}/>
     </div>
   )
 }

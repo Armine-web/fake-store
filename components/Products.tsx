@@ -7,6 +7,8 @@ import Image from 'next/image';
 
 import noImage from '@/public/noImage.jpeg'
 
+
+
 export function Products() {
 
   const dispatch = useAppDispatch();
@@ -16,7 +18,7 @@ export function Products() {
     if(status==='idle'){
       dispatch(fetchProducts())
     }
-  }, [dispatch]);
+  }, [dispatch, status]);
 
   if(status === 'loading') return <p>Loading...</p>;
   if(status ==='failed') return <p>Error: {error}</p>
