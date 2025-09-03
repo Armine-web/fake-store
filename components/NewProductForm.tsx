@@ -27,7 +27,7 @@ export  function NewProductForm() {
    
   };
 
-  const changeHandler = (e: ChangeEvent<HTMLLIElement>)=>{
+  const changeHandler = (e: ChangeEvent<HTMLInputElement>)=>{
     
     setProduct({...product, [e.target.name]: e.target.value.trim()})
 
